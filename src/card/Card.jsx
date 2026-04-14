@@ -1,7 +1,7 @@
 import React from 'react'
-const Card = ({ user }) => {
+function Card({ user }) {
   return (
-    <div>
+    <div className='card'>
       <h3>{user.name}</h3>
       <p><strong>Email:</strong> {user.email}</p>
       <p><strong>Phone:</strong> {user.phone}</p>

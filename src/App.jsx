@@ -1,20 +1,7 @@
 import { useState, useEffect } from 'react';
-
-function UserCard({ user }) {
-  return (
-    <div className="card">
-      <h3>{user.name}</h3>
-      <p><strong>Email:</strong> {user.email}</p>
-      <p><strong>Phone:</strong> {user.phone}</p>
-      <p><strong>City:</strong> {user.address.city}</p>
-      <p><strong>Company:</strong> {user.company.name}</p>
-    </div>
-  );
-}
-
+import UserCard from './card/Card';
 const App = () => {
   const [users, setUsers] = useState([]); 
-
   useEffect(() => {
     async function fetchUsers() {
       try {
